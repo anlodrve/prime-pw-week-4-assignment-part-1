@@ -36,7 +36,7 @@ function multiplyThree(firstNumber, secondNumber, thirdNumber){
   return result
 }
 
-console.log('This should multiple three numbers together:', multiplyThree(4, 5, 6));
+console.log('This should multiply three numbers together:', multiplyThree(4, 5, 6));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -58,8 +58,15 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  return array[array.length-1]
 }
+
+let fruit=['apple', 'orange', 'banana']
+getLast(fruit)
+console.log(getLast(fruit));
+
+let dogs=[]
+console.log(getLast(dogs));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
