@@ -36,7 +36,7 @@ function multiplyThree(firstNumber, secondNumber, thirdNumber){
   return result
 }
 
-console.log('This should multiply three numbers together:', multiplyThree(4, 5, 6));
+console.log('This should be the product of 4, 5, and 6:', multiplyThree(4, 5, 6));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -63,17 +63,31 @@ function getLast( array ) {
 
 let fruit=['apple', 'orange', 'banana']
 getLast(fruit)
-console.log(getLast(fruit));
+console.log("This should be a fruit:", getLast(fruit));
 
 let dogs=[]
-console.log(getLast(dogs));
+console.log("This should say undefined:", getLast(dogs));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
-}
+  console.log('in the find function');
+  for( let parameter of array ){
+      if( parameter === value ){
+        console.log('We have a match - ', value);
+        return true
+      } //end match
+      else{
+        console.log('Do we have a match?', false );
+      } //end no match
+  } //end for loop 
+} //end function find 
+
+
+let seaCreatures = ['squid', 'urchin' , 'stingray', 'dolphin', 'starfish', 'seahorse']
+console.log( find( 'urchin', seaCreatures));
+console.log( find( 'mermaid', seaCreatures));
 
 // ----------------------
 // Stretch Goals
@@ -81,6 +95,14 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+    let text = string;
+    let result = text.indexOf(letter);
+    if( result === 0 ){
+      return true
+    }
+    else {
+      return false;
+    }
 
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
@@ -97,6 +119,7 @@ function sumAll( ) {
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function allPosArray(inputArray)
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
